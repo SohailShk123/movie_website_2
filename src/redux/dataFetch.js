@@ -10,13 +10,13 @@ const initialState = {
 
 export const Data = createAsyncThunk("DataRetrive", async () => {
   const responce = await axios(
-    "/movie/now_playing?api_key=49f094204a52eadc5e4928ca558eceeb"
+    "/movie/now_playing?api_key="
   );
   return responce;
 });
 export const fetchOne = createAsyncThunk("fetchOneData", async (input) => {
   const responce = await axios(
-    `/search/movie?query=${input}&api_key=49f094204a52eadc5e4928ca558eceeb`
+    `/search/movie?query=${input}&api_key=`
   );
   return responce;
 });
