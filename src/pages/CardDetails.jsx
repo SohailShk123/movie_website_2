@@ -8,7 +8,7 @@ const CardDetails = () => {
     const [data, setData] = useState([])
     const navigate = useNavigate()
     const fetchOne = async (id) => {
-        const { data } = await axios(`https://api.themoviedb.org/3/movie/${id}?api_key=49f094204a52eadc5e4928ca558eceeb`)
+        const { data } = await axios(`/movie/${id}?api_key=49f094204a52eadc5e4928ca558eceeb`)
         console.log(data)
         setData(data)
     }

@@ -10,13 +10,13 @@ const initialState = {
 
 export const Data = createAsyncThunk("DataRetrive", async () => {
   const responce = await axios(
-    "https://api.themoviedb.org/3/movie/now_playing?api_key=49f094204a52eadc5e4928ca558eceeb"
+    "/movie/now_playing?api_key=49f094204a52eadc5e4928ca558eceeb"
   );
   return responce;
 });
 export const fetchOne = createAsyncThunk("fetchOneData", async (input) => {
   const responce = await axios(
-    `https://api.themoviedb.org/3/search/movie?query=${input}&api_key=49f094204a52eadc5e4928ca558eceeb`
+    `/search/movie?query=${input}&api_key=49f094204a52eadc5e4928ca558eceeb`
   );
   return responce;
 });
